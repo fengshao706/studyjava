@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class CollectionFramework {//练习集合的使用
     public class Test01 {
@@ -30,6 +33,13 @@ public class CollectionFramework {//练习集合的使用
         public void printAll(){
             System.out.println(names);//打印输出整个集合
         }
+        public void useIterator(){//使用迭代器打印输出元素
+            Iterator iterator=names.iterator();
+            while(iterator.hasNext()){
+                System.out.print(iterator.next());
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args) {
         Test01 test01=new CollectionFramework().new Test01();
@@ -45,5 +55,9 @@ public class CollectionFramework {//练习集合的使用
         test01.printAll();
         test01.getOnePerson(2);
         test01.firstAppearance("Tom");
+        test01.useIterator();
+        Integer []num={1,2,5,34,23,111,234,4};//想要将数组转换为列表，需要使用基本类型包装类，否则之后打印返回的是数组
+        List<Integer> list=Arrays.asList(num);
+        System.out.println(list);
     }
 }
