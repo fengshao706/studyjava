@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class CollectionFramework {//练习集合的使用
+public class CollectionFrameworkArrayList {//练习ArrayList集合的使用
     public class Test01 {
         private ArrayList<String>names=new ArrayList<String>();//定义一个关于集合的全局变量
         public void addOnePerson(String name){
@@ -42,7 +42,7 @@ public class CollectionFramework {//练习集合的使用
         }
     }
     public static void main(String[] args) {
-        Test01 test01=new CollectionFramework().new Test01();
+        Test01 test01=new CollectionFrameworkArrayList().new Test01();
         test01.addOnePerson("Harry Potter");
         test01.addOnePerson("LionKing");
         test01.addOnePerson("Peppa Pig");
