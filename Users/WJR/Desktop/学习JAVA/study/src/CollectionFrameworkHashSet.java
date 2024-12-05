@@ -9,6 +9,12 @@ public class CollectionFrameworkHashSet {//练习HashSet集合的使用
         public void printAll(){
             System.out.println(names);
         }
+        public void addCalculate(HashSet<String> other){//实现两个集合之间的并运算
+            names.addAll(other);
+        }
+        public void retainCalculate(HashSet<String>other){//实现两个集合之间的交运算
+            names.retainAll(other);
+        }
     }
     public static void main(String[]args){
         Test01 test01=new CollectionFrameworkHashSet().new Test01();
